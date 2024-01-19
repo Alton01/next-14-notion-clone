@@ -41,7 +41,7 @@ export const Title = ({ initialData }: TitleProps) => {
   };
 
   const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Ente") {
+    if (event.key === "Enter") {
       disableInput();
     }
   };

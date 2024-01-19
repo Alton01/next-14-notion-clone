@@ -316,9 +316,11 @@ export const getTrash = query ({
 
             const document = await ctx.db.patch(args.id, {
                 ...rest,
-            })
-        }
-    })
+            });
+
+            return document;
+        },
+    });
 
     //TO REMOVE ICON
     export const removeIcon = mutation ({

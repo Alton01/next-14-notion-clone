@@ -58,6 +58,7 @@ export const Navigation = () => {
     }
   }, [pathname, isMobile]);
 
+  //THIS IS FOR WHEN THEUSER HAS CLICKED ON THESIDEBAR TO EITHER INCREASE OR DECREASE ITS WIDTH
   const handleMouseDown = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
@@ -69,6 +70,7 @@ export const Navigation = () => {
     document.addEventListener("mouseup", handleMouseUp);
   };
 
+  //THIS IS FOR WHEN THEUSER HAS CLICKED ON THE SIDEBAR AND IS INCREASE OR DECREASE ITS WIDTH
   const handleMouseMove = (event: MouseEvent) => {
     if (!isResizingRef.current) return;
     let newWidth = event.clientX;
@@ -86,12 +88,14 @@ export const Navigation = () => {
     }
   };
 
+  //THIS IS FOR WHEN THEUSER HAS STOPPED CLICKED ON THESIDEBAR TO EITHER INCREASE OR DECREASE ITS WIDTH
   const handleMouseUp = () => {
     isResizingRef.current = false;
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
   };
 
+  //THIS IS FOR RESETTING THE SIDEBAR WIDTH TO ITS ORIGINAL POSITION BY CLICKING ON THE DIV FOR ADJUSTING ITS SIZE
   const resetWidth = () => {
     if (sidebarRef.current && navbarRef.current) {
       setIsCollapsed(false);
@@ -107,6 +111,7 @@ export const Navigation = () => {
     }
   };
 
+  //THIS IS FOR COLLAPSING THE SIDEBAR WIDTH TO 0
   const collapse = () => {
     if (sidebarRef.current && navbarRef.current) {
       setIsCollapsed(true);

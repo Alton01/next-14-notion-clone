@@ -34,6 +34,7 @@ export const SearchCommand = () => {
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
+      //this is to make clicking on CTRL Button and k to pop up the search modal
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         toggle();
@@ -41,6 +42,7 @@ export const SearchCommand = () => {
     };
 
     document.addEventListener("keydown", down);
+    //this is to make clicking on CTRL Button and k to close the search modal popup
     return () => document.removeEventListener("keydown", down);
   }, [toggle]);
 
