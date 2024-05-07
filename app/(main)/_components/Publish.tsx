@@ -59,6 +59,7 @@ export const Publish = ({ initialData }: PublishProps) => {
     });
   };
 
+  //FOR COPYING URL IN BROWSER
   const onCopy = () => {
     navigator.clipboard.writeText(url);
 

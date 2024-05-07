@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+//FOR PUBLISHED NOTE TO GET WHERE THE ORIGINAL WEBSITE IS BEING HOSTED ON
 export const useOrigin = () => {
   const [mounted, setMounted] = useState(false);
 
