@@ -88,7 +88,7 @@ export const Navigation = () => {
     }
   };
 
-  //THIS IS FOR WHEN THEUSER HAS STOPPED CLICKED ON THESIDEBAR TO EITHER INCREASE OR DECREASE ITS WIDTH
+  //THIS IS FOR WHEN THEUSER HAS STOPPED AND REMOVED MOUSE FROM SIDEBAR CLICK
   const handleMouseUp = () => {
     isResizingRef.current = false;
     document.removeEventListener("mousemove", handleMouseMove);
